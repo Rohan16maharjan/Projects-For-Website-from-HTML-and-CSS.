@@ -1,0 +1,130 @@
+1)  git config user.name "******" (to put the username in git)
+2)  git config user.email "m*************@gmail.com" (to put the email in git)
+3)  git config --list (which helps tp show the list of all the username and emails)
+4)  to see the username and email just click git config user.name/ user.email
+5)  three stages in git (commit =snap shot)
+	a) working directory (what we see inside the folder where we saved the files)
+	b)staging area (files which we want to go into commit and if we dont want it to go then not sending it commit)
+	c)git directory (.git/hidden folder helps to provide the files that is of 5 days before. )
+***
+6)  git init(git will track/take responsibilty all the files)
+7)  git status**
+8)  git add . (helps to add all the file in staging area)
+9)  git status
+10) git commit -m "Initial Commit" helps to put the files in git directory
+11) git status( it is just to check if it done or not. we can only see)
+12) git log (to see the commit)
+** then modify the files and saved.then to add the file to put in git directory the steps are:
+13) git add filename(1.txt) it will only commit it.
+14) git status
+15) git commit -m"added"
+
+16) we can take the file when we modified it before.
+17) to delete all the files from git we can use (rm -rf {filename})
+18) to copy the repository (git clone then paste and write the folder name at last to copy those files into that folder.)
+19) pwd (present working directory ) in which directory
+20) ls (list) list of files in the folder.
+21) cd ( change the directory) to change the files.eg. cd filename cd(it-logger)
+22) q for quittings
+23) .git = repository (helps to provide the output or provide the files that were of 2 or 3days)
+24) file status lifecycle
+	a)untracked= git init ,git status (it must be tracked.)
+	b)unmodified =
+	c)modified = if we do any modify in the files it helps to show us the modification and then if we add the file 
+		     and do the status then it will commiit the modified file.
+	d)staged = if the files is staged then it is ready to be commit.
+
+25) to create the new file. touch filename {error.log}
+26) to ignore the files first create .gitignore then inside the gitignore 
+     we put the files name and we there is multiple files then we can write as *.log which will ignore 
+     all the files.
+27) to ignore the folder or directory we can write the folder name eg dir/ 
+28) inorder to ignore only one dir we can use /dir/ in gitignore.
+29) inorder to ignore only specific dir then we can write the specific name in gitignore like index/dir.
+30) git diff = helps to compare the old files with the modified files. first it should be in staging area and then the file should be modified.
+31) git diff --staged = helps to compare the both the staged files.
+32) git commit -a -m "Direct commit"= to skip the staging area which helps for direct commiting.
+		moving and renaming the files in git.
+33) to rename the file we can use f2 key. 
+34) to remove the file = git rm (file name) eg. git rm 3.txt
+35) to rename the file we can use git mv (old file name) to (new file name) eg git mv 1.txt first_renamed.txt.
+36) to untrack the file use the command=git rm --cached (filename) eg.git rm -cached 2.pptx.It is untracked so
+	 that the git doesnot shows what is modified in the file and if it is kept in git ignore then also it will be show so use
+	 this command so that it will not be shown in the git.
+37)a) to view the commit
+ 	to delete the whole git use = rm -rf .git
+        git log helps to show all the files in the folder
+        git log -p will helps to show the diff in the old files and new files
+	git log -p -3/-2 helps to show only 2 or 3 changes of the files.
+	git log --stat helps to show all the commit in summary or short.
+	q to quit
+	git log --pretty=oneline helps to provide commit in one line or helps to show what happpen in whats
+	git log --pretty=short helps to show commit in short
+	git log --pretty=full hepls to show full commit
+	git log --since=2.days hepls to show the changes of 2 days.
+	git log --pretty=format:"%h -- %an" in website git scm useful option for git log
+    b) to change the commit
+
+
+38) to stage the file use git add .
+    to unstage the fiel use git restore --staged filename.
+    to unmodify one file use git checkout -- filename.
+    then git status
+    to unmodify many files git checkout -f.
+ 
+39) *go to github.com
+    *then create account
+    *then add new repository
+    then open git bash here
+    then git status
+    then git remote(website or repsitory that is in the internet)
+    *as we have already created git repository so copy the link
+    *then copy the push an existing repository link
+    *then git remote
+    git remote -v (shows which to be to push or pull)
+    *then add the push origin from git
+    *to push the git use git push -u orgin master
+
+39)alias= using short form
+   * to use alias use git config --global alias.st status
+   * to delete the alias in git use
+ 	
+40) branching**
+   * git  restore filename = this will bring back all the things that was modified before. dont do too much
+     to create new branch = git checkout -b (branch name)
+     to switch the branch use = git switch (branch name)
+     to see how many branch arre there = git branch
+     we can use both the master and branch to restore the files we can change the files from master to branch but donot delete the master files if we delete it it will be difficult to restore the files
+     to delete the brach= git branch -D (branch name) 
+        
+41) to put the branch in github**
+    first open github in web
+    then do git status in git bash
+    go to that brach which u want to push
+    then type git push origin (branch name) then it will come to github
+    to compare the master and new branch first do pull request then it will compare and show the changes between them.
+
+42)Branching and merging in git****
+	first create the branch by git checkout -b branchname(rohan)
+	then do some changes in there and save it
+	then do git add .
+	then git commit -m 'changed git rohan'
+	then git status
+	then go to master branch = git checkout master
+	then in master branch = git merge branch name (rohan)
+43) to know the changes in the branch type git branch -v***
+ 	to see the merged branch = git branch --mergeds
+	to see which is not merged = git branch --no-merged
+	to delete the branch which is merged= git branch -d (branchname)
+	to delete the branch which is not merged = git branch -D (branchname)
+44)git status
+   git log
+   to delete the branch type= git push -d origin (branchname)
+
+45) git push will push the changes to the repository***
+    git pull will helps to pull the changes of other branches in master branch***
+		
+    
+    
+	
+	
